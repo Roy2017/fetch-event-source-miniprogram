@@ -1,0 +1,15 @@
+.safe-top {
+  padding-top: calc(constant(safe-area-inset-top) * 0.7);
+  padding-top: calc(env(safe-area-inset-top) * 0.7);
+}
+.safe-bottom {
+  padding-bottom: calc(constant(safe-area-inset-bottom) * 0.7);
+  padding-bottom: calc(env(safe-area-inset-bottom) * 0.7);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
