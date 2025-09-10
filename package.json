@@ -19,7 +19,8 @@
     "lint-staged:js": "eslint --config ./.eslintrc.cjs --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "changeset": "changeset",
     "packages-version": "changeset version",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "pnpm run -C packages/fetch-event-source-miniprogram build"
   },
   "config": {
     "commitizen": {
