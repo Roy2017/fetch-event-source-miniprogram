@@ -54,8 +54,9 @@ const checkOpen = (response: any) => {
   if (isH5() && response.headers.get('content-type')?.startsWith(EventStreamContentType) && response.status === 200) {
     return true
   }
-  else if (isWeixin() && response.header['content-type']?.startsWith(EventStreamContentType) && response.statusCode === 200) {
-    return true
+  else if (isWeixin() && response.statusCode === 200) {
+    const contentType = response.header['content-type'] || response.header['Content-Type']
+    return contentType.startsWith(EventStreamContentType)
   }
   return false
 }
@@ -97,11 +98,11 @@ const sendStreamRequest = () => {
         console.log('onmessage:', msg.data)
       }
     },
-    onerror: () => {
-      console.log('onerror 11')
+    onerror: (err) => {
+      console.log('onerror', err)
     },
     onclose: () => {
-      console.log('onclose 11')
+      console.log('onclose')
     },
     openWhenHidden: true,
   })

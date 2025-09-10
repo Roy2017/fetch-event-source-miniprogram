@@ -163,7 +163,7 @@ export function fetchEventSource(input: RequestInfo, {
                     enableChunked: true,
                     responseType: 'arraybuffer',
                     success: (res: any) => {
-                        if (res?.statusCode == 200) {
+                        if (res?.statusCode == 200 || res?.errMsg === "request:ok") {
                             onclose?.();
                         }
                         dispose();
