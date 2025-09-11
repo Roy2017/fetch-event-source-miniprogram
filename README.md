@@ -13,7 +13,7 @@ import { EventStreamContentType, fetchEventSource } from '@chenroy/fetch-event-s
 const _fetchUrl = 'http://localhost:3001/sse';
 const token = ''
 
-fetchFunction(_fetchUrl, {
+fetchEventSource(_fetchUrl, {
     method: 'GET',
     headers: {
       'Accept': 'application/json, text/plain',
@@ -36,10 +36,10 @@ fetchFunction(_fetchUrl, {
       }
     },
     onerror: () => {
-      console.log('onerror 11')
+      console.log('onerror')
     },
     onclose: () => {
-      console.log('onclose 11')
+      console.log('onclose')
     },
     openWhenHidden: true,
   })
