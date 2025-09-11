@@ -1,13 +1,13 @@
 {
   "name": "@chenroy/fetch-event-source-miniprogram",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A better API for making Event Source requests, with all the features of fetch()",
-  "homepage": "https://github.com/Azure/fetch-event-source#readme",
-  "repository": "github:Azure/fetch-event-source",
+  "homepage": "https://github.com/Roy2017/fetch-event-source-miniprogram",
+  "repository": "https://github.com/Roy2017/fetch-event-source-miniprogram",
   "bugs": {
-    "url": "https://github.com/Azure/fetch-event-source/issues"
+    "url": "https://github.com/Roy2017/fetch-event-source-miniprogram/issues"
   },
-  "author": "Microsoft",
+  "author": "cxhroy",
   "license": "MIT",
   "main": "lib/cjs/index.cjs",
   "module": "lib/esm/index.js",
